@@ -9,8 +9,13 @@ const Modal = forwardRef(function Modal({ text }, ref) {
     const ModalTextRef = useRef()
 
     function showModalText() {
-        setModalText(ModalTextRef.current.value)
-        ModalTextRef.current.value = ""
+        let inputValue = ModalTextRef.current.value
+
+        // Validation and Sanitization
+        if (typeof inputValue === "string") {
+            setModalText(inputValue.toString())
+            ModalTextRef.current.value = ""
+        } else return
     }
 
     // Exposing component APIs via the useImperativeHandle Hook
