@@ -1,0 +1,85 @@
+.dialog_modal{
+    border-radius: 1rem;
+
+    input{
+        margin-block: 1rem;
+        width: 95%;
+        font-size: 1.2rem;
+        padding: .5rem;
+        border-radius: .5rem;
+        border: none;
+        &:focus, &:active{
+            border: none;
+            outline: none;
+        }
+    }
+
+    .display_text{
+        background-color: rgb(0, 0, 0);
+        min-height: 2rem;
+        width: 100%;
+        margin-block: .9rem;
+        padding-block: .55rem;
+        border-radius: .5rem;
+
+        p{
+            max-width: 60%;
+            margin-inline: auto;
+            font-weight: 900;
+            text-wrap: wrap;
+        }
+    }
+
+    .action_btn{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        button{
+            &:nth-child(1){
+            background-color: rgb(248, 48, 48);
+            }
+            &:nth-child(2){
+                background-color: rgb(9, 83, 83);
+            }
+        }
+    }
+
+    p{
+        margin: 0.5rem 0;
+        font-size: 1.2rem;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    &[open] {
+        margin-inline: auto;
+        max-width: 60%;
+        animation: slide-in-from-top 0.35s ease-out;
+    }
+
+    // No limit to setting a backdrop
+    &::backdrop {
+        background-image: linear-gradient(45deg,
+            magenta,
+            rebeccapurple,
+            dodgerblue,
+            green);
+        opacity: 0.75;
+
+        // background-color: rgba(15, 9, 9, 0.788);
+      }
+      
+      
+}
+
+@keyframes slide-in-from-top {
+    0% {
+      transform: translateY(-15%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
