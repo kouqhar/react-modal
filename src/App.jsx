@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Socials from "./Socials"
+import Socials from "./Socials.jsx"
 import './App.css'
 
 function App() {

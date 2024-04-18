@@ -1,5 +1,5 @@
 import { useRef } from "react"
-import Modal from "./Modal"
+import Modal from "./Modal.jsx"
 
 const Socials = () => {
     const dialog = useRef()
